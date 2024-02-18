@@ -1,0 +1,902 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1b1b1b;
+    margin: 0;
+    font-family: 'Mukta';
+}
+
+.btn span {
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+
+.btn {
+    display: block;
+    background-color: transparent;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    padding-top: 11px;
+    color: #e06b34;
+    border: 2px solid #e06b34;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: .6s ease-in-out all;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    color: #1b1b1b;
+}
+
+.btn::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #e06b34;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -220px;
+    transition: .6s ease-in-out all;
+}
+
+.btn:hover::after {
+    left: 0;
+}
+
+.acento {
+    color: #E16428;
+    text-shadow: 0 0 1px #E16428;
+    font-weight: bold;
+}
+
+.bold {
+    font-weight: bold;
+    color: ghostwhite;
+
+}
+
+.subrayado {
+    text-decoration: underline #E16428;
+    font-weight: bold;
+}
+
+.estrella{
+    color: #E16428;
+    text-shadow: 0 0 1px #E16428;
+    font-weight: bold;
+    font-size: .8em;
+    margin-left: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+header {
+    background-color: #f0f0f0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.btn-menu {
+    padding: 20px 10px;
+    padding-bottom: 5px;
+    width: 60px;
+    cursor: pointer;
+}
+
+.nav-input {
+    display: none;
+}
+
+.nav {
+    position: absolute;
+    width: 100%;
+    background: #111111d0;
+    display: flex;
+    flex-direction: column;
+    top: 74px;
+    left: -100%;
+    transition: .7s ease;
+}
+
+.nav-input:checked+.nav {
+    left: 0;
+}
+
+header .principal {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+    margin-bottom: 0;
+}
+
+.principal li {
+    list-style: none;
+    padding-bottom: 15px;
+}
+
+.principal li ul {
+    display: none;
+    position: relative;
+    padding-top: 10px;
+}
+
+.principal li ul a {
+    font-size: 20px;
+}
+
+.principal li:hover>ul {
+    display: block;
+}
+
+header .principal a {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: ghostwhite;
+    transition: .3s ease;
+}
+
+header .principal a:hover {
+    color: #E16428;
+    transition: .3s ease;
+}
+
+header .btn {
+    display: none;
+}
+
+
+
+#presentacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 90vh;
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.60),
+            rgba(0, 0, 0, 0.60)), url('https://images.squarespace-cdn.com/content/v1/5d77a7f8ad30356d21445262/1586417831260-TC4QV3XCED8MWTT43R95/curso+de+fotografia.jpg?format=2500w');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#presentacion .video {
+    display: none;
+}
+
+#presentacion h1 {
+    font-size: 2.5em;
+    color: ghostwhite;
+    text-shadow: 2px 2px 10px black;
+    padding-bottom: 60px;
+    letter-spacing: 1.2px;
+}
+
+.btn-present a {
+    padding: 12px 55px;
+    font-size: 1.2em;
+    letter-spacing: 1.2px;
+    text-align: center;
+    background-color: #e06b34;
+    color: #1b1b1b;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    transition: .4s ease-in;
+}
+
+.btn-present a:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+    background-color: #d6581e;
+    color: ghostwhite;
+}
+
+
+
+#conciencia {
+    background-color: #1b1b1b;
+}
+
+#conciencia .container {
+    padding: 40px 12px;
+}
+
+.texto h2 {
+    font-size: 2em;
+    color: ghostwhite;
+    padding-left: 20px;
+    letter-spacing: 1.2px;
+}
+
+.texto ul li {
+    color: ghostwhite;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+}
+
+
+
+#Autoridad {
+    background-color: antiquewhite;
+}
+#Autoridad .container {
+    padding: 50px 10px;
+    padding-left: 20px;
+}
+
+#Autoridad h1 {
+    font-size: 38px;
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid #E16428;
+}
+
+#Autoridad p {
+    font-size: 20px;
+    letter-spacing: 0.8px;
+}
+
+.marcas li {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.perfil img {
+    display: none;
+}
+
+.perfil h2 {
+    display: none;
+}
+
+
+#contenido .container {
+    padding: 40px 15px;
+    padding-left: 20px;
+    color: #f0f0f0;
+}
+
+#contenido .img-ld, .img-li{
+    display: none;
+}
+#contenido h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+#contenido ul {
+    padding-left: 0;
+    padding-bottom: 25px;
+    margin: 0;
+}
+
+#contenido .columna1 {
+    padding-bottom: 0;
+}
+
+#contenido ul li {
+    font-size: 16px;
+    letter-spacing: 1px;
+    list-style: none;
+    font-weight: bold;
+    padding: 16px 10px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    border-bottom: 2px solid #e06b34;
+    z-index: 1;
+    position: relative;
+    transition: .3s ease-out;
+}
+
+#contenido ul li:hover {
+    transform: scale(0.98);
+}
+
+#contenido .img-lateral {
+    display: none;
+}
+
+
+
+#opiniones .container {
+    padding: 20px 15px;
+    padding-left: 20px;
+    color: #f0f0f0;
+}
+
+.copy p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.copy h1 {
+    font-size: 5em;
+    font-weight: 100;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    height: 100px;
+}
+
+#opiniones .titulo {
+    font-size: 2em;
+    border-bottom: 2px solid #d6581e;
+
+}
+
+.opinion p {
+    font-size: 18px;
+}
+
+
+
+#caracteristicas {
+    background-color:antiquewhite;
+}
+
+#caracteristicas .container {
+    padding: 50px 15px;
+    padding-left: 20px;
+    color: #1b1b1b;
+}
+
+#caracteristicas h1 {
+    font-size: 32px;
+    text-align: center;
+    border-bottom: 2px solid #E16428;
+    letter-spacing: 0.8px;
+}
+
+#caracteristicas .carta {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.carta img {
+    width: 110px;
+    height: 100px;
+    padding-right: 20px;
+}
+
+.carta h2 {
+    display: none;
+}
+
+.carta p {
+    margin: 4px 0;
+    letter-spacing: 0.8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+#Libro .container {
+    padding: 50px 15px;
+    padding-left: 20px;
+    color: #f0f0f0;
+}
+
+#Libro h2 {
+    font-size: 38px;
+    letter-spacing: 0.8px;
+}
+
+#Libro p {
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    padding-bottom: 25px;
+}
+
+#Libro .ebook {
+    display: none;
+}
+
+
+
+#oferta {
+    background-color: #1b1b1b;
+}
+
+#oferta .container {
+    padding: 50px 15px;
+    padding-left: 20px;
+    color: ghostwhite;
+}
+
+#oferta h2 {
+    font-size: 38px;
+    letter-spacing: 0.8px;
+    border-bottom: 2px solid #E16428;
+}
+
+#oferta p {
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    padding-bottom: 25px;
+}
+
+#oferta h1 {
+    display: none;
+}
+
+.img-regalo {
+    display: none;
+}
+
+@media (min-width: 950px) {
+    .btn-menu {
+        display: none;
+    }
+
+    .nav-input:disabled {
+        display: block;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+
+    header {
+        position: fixed;
+        background-color: #1b1b1b;
+    }
+
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 85px;
+        padding: 0 40px;
+    }
+
+    header .nav {
+        background-color: transparent;
+        justify-content: center;
+        top: auto;
+        left: auto;
+        height: 100%;
+        width: fit-content;
+        position: relative;
+    }
+
+    header .principal {
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+        padding-top: 10px;
+    }
+
+    header .principal a {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding-right: 80px;
+        color: ghostwhite;
+    }
+
+    .principal li {
+        position: relative;
+        padding: 0;
+    }
+
+    .principal li ul {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 200px;
+        top: 51px;
+        padding: 2px;
+        padding-top: 20px;
+        border-top: 4px solid #e06b34;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        transition: .5s ease-in-out;
+    }
+
+    .principal li:hover ul {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .principal li ul li {
+        padding-bottom: 15px;
+    }
+
+    .principal li ul a {
+        color: #f0f0f0;
+        font-size: 16px;
+        padding: 0;
+        padding-right: 5px;
+        padding-left: 15px;
+    }
+
+    header .btn {
+        display: block;
+        margin-top: 18px;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+
+
+
+    #presentacion {
+        background-image: none;
+        height: 100vh;
+    }
+
+    #presentacion .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 40px;
+        padding-top: 120px;
+        width: 100%;
+        height: 100vh;
+    }
+
+    #presentacion .video {
+        display: block;
+        width: fit-content;
+        height: auto;
+        box-shadow: 0px -20px 30px 0px rgba(0, 0, 0, 0.849);
+    }
+
+    .video video {
+        width: 100%;
+        height: 100%;
+    }
+
+    #presentacion h1 {
+        display: none;
+    }
+
+    .btn-present {
+        display: none;
+    }
+
+
+
+    #conciencia .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 80px 40px;
+        padding-bottom: 150px;
+    }
+
+
+    .texto h2 {
+        font-size: 3em;
+        padding-left: 0;
+    }
+
+    .texto ul li {
+        font-size: 1.1em;
+    }
+
+    #conciencia .img-container {
+        background-image: url('media/mockup.png');
+        background-size: cover;
+        background-position: center center;
+        width: 600px;
+        height: 700px;
+    }
+
+
+    #Autoridad .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 150px 40px;
+    }
+
+    #Autoridad .foto-perfil {
+        background-image: url('media/kike.jpeg');
+        background-size: cover;
+        background-position: center center;
+        width: 600px;
+        height: 700px;
+    }
+
+    #Autoridad .marcas {
+        display: none;
+    }
+
+    #Autoridad h1 {
+        font-size: 3em;
+        width: 235px;
+    }
+
+    .perfil {
+        padding-right: 60px;
+        width: 60%;
+    }
+
+    .perfil img {
+        display: block;
+        width: 70%;
+    }
+
+    #Autoridad p {
+        font-size: 20px;
+
+    }
+
+
+
+    #contenido .container {
+        padding: 80px 40px;
+    }
+
+    #contenido h2 {
+        font-size: 3em;
+    }
+
+    #contenido ul li {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    #contenido .superior {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+
+    #contenido .tabla-1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    #contenido .tabla-2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #contenido .img-ld {
+        display: block;
+        height: 100%;
+        width: 55%;
+    }
+
+    .img-ld img {
+        width: 100%;
+    }
+
+    #contenido .img-li {
+        display: block;
+        height: 100%;
+        width: 55%;
+    }
+
+    .img-li img {
+        width: 100%;
+    }
+
+    #contenido .extra {
+        padding-bottom: 25px;
+    }
+
+    #contenido .btn {
+        width: 220px;
+        height: 58px;
+        padding-top: 14px;
+    }
+
+
+    #opiniones .container {
+        padding: 80px 40px;
+        padding-top: 20px;
+    }
+
+    #opiniones .titulo {
+        font-size: 3em;
+    }
+
+    .copy h1 {
+        font-size: 7em;
+        height: 130px;
+        font-weight: 100;
+        margin-left: 0px;
+    }
+
+    .copy p {
+        font-size: 18px;
+        margin-left: 0px;
+        letter-spacing: .8px;
+    }
+
+    .opinion h2 {
+        font-size: 1.5em;
+    }
+
+    .opinion p {
+        font-size: 1.25em;
+    }
+
+
+
+    #caracteristicas .container {
+        padding: 120px 40px;
+    }
+
+    #caracteristicas .subcontainer {
+        display: flex;
+        padding-top: 30px;
+    }
+
+    #caracteristicas h1 {
+        font-size: 3em;
+        letter-spacing: 2px;
+    }
+
+    .carta {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .carta img {
+        margin-bottom: 10px;
+        width: 60%;
+        height: 60%;
+        padding: 0;
+    }
+
+    .carta h2 {
+        display: block;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .carta p {
+        font-size: 1em;
+        text-align: justify;
+    }
+
+
+
+    #Libro .container {
+        padding: 80px 40px;
+        display: flex;
+    }
+
+    #Libro .copy-bonus {
+        margin-right: 30px;
+    }
+
+    #Libro h2 {
+        font-size: 3em;
+    }
+
+    #Libro p {
+        font-size: 1.25em;
+        margin-bottom: 40px;
+    }
+
+    #Libro .ebook {
+        display: block;
+        width: 40%;
+        margin-left: 40px;
+        box-shadow: 10px 10px 20px 0px rgb(0, 0, 0);
+        transition: .5s ease-in-out;
+    }
+
+    .ebook img {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #fff;
+        cursor: grab;
+    }
+
+    .ebook:hover {
+        transform: scale(1.07);
+        transition: .5s ease-in-out;
+    }
+
+    #Libro .btn {
+        width: 220px;
+        height: 54px;
+        padding-top: 12px;
+    }
+
+
+
+    #oferta .container {
+        padding: 100px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #oferta h2 {
+        font-size: 3em;
+    }
+
+    #oferta p {
+        font-size: 1.25em;
+        margin-bottom: 0;
+        padding-bottom: 20px;
+    }
+
+    #oferta h1 {
+        display: block;
+        font-size: 4em;
+        color: #E16428;
+        filter: drop-shadow(0px 0px 5px #ff5100);
+        font-weight: bold;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    #oferta .btn {
+        width: 220px;
+        height: 54px;
+        padding-top: 12px;
+    }
+
+    .img-regalo {
+        display: block;
+        padding-right: 150px;
+        width: 80%;
+    }
+
+    .img-regalo img {
+        width: 80%;
+        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.75));
+        cursor: grab;
+    }
+
+    .img-regalo img:hover {
+        animation: bounce1 .3s alternate infinite ease-in;
+    }
+
+    @keyframes bounce1 {
+        0% {
+            transform: translateY(-5%);
+        }
+
+        100% {
+            transform: translateY(5%);
+        }
+    }
+}
